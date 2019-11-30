@@ -3,17 +3,14 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 class Squirrel(models.Model):
-    X = models.DecimalField(
+
+    X = models.FloatField(
         help_text=_('longitude'),
-        max_digits=16,
-        decimal_places=13,
         null=True,
     )
     
-    Y = models.DecimalField(
+    Y = models.FloatField(
         help_text=_('latitude'),
-        max_digits=16,
-        decimal_places=13,
         null=True,
     )
 
@@ -48,8 +45,9 @@ class Squirrel(models.Model):
         null=True,
     )
 
-    Hectare_Squirrel_Number = models.PositiveIntegerField(
+    Hectare_Squirrel_Number = models.CharField(
         help_text=_('Hectare Squirrel Number'),
+        max_length=10,
         null=True,
     )
 
@@ -156,7 +154,6 @@ class Squirrel(models.Model):
 
     Above_Ground_Sighter_Measurement = models.CharField(
         help_text=_('Above Ground Sighter Measurement'),
-        default=FALSE,
         max_length = 10,
         null=True,
     )
@@ -167,11 +164,11 @@ class Squirrel(models.Model):
         null=True,
     )
 
-    Running = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Chasing = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Climbing = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Eating = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Foraging = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
+    Running = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Chasing = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Climbing = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Eating = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Foraging = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
 
     Other_Activities = models.CharField(
         help_text=_('Other Activities'),
@@ -179,14 +176,14 @@ class Squirrel(models.Model):
         null=True,
     )
 
-    Kuks = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Quaas = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Moans = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Tail_Flags = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Tail_Twitches = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Approaches = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Indifferent = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Runs_From = models.CharField(choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
+    Kuks = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Quaas = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Moans = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Tail_Flags = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Tail_Twitches = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Approaches = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Indifferent = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Runs_From = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
     
     Other_Interactions = models.CharField(
         help_text=_('Other Interactions'),
