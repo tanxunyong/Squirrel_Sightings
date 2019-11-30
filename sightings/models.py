@@ -16,9 +16,12 @@ class Squirrel(models.Model):
 
     Unique_Squirrel_ID = models.CharField(
         help_text=_('Unique Squirrel ID'),
-        max_length=3,
+        max_length=13,
         null=True,
     )
+
+    def __str__(self):
+        return self.Unique_Squirrel_ID
 
     Hectare = models.CharField(
         help_text=_('Hectare'),
@@ -67,6 +70,7 @@ class Squirrel(models.Model):
         default = BLANK,
         max_length=10,
         null=True,
+        blank=True,
     )
 
     GRAY = 'Gray'
@@ -85,6 +89,7 @@ class Squirrel(models.Model):
         default = BLANK,
         max_length = 10,
         null=True,
+        blank=True,
     )
 
     G = 'Gray'
@@ -119,18 +124,21 @@ class Squirrel(models.Model):
         default = BLANK,
         max_length = 30,
         null=True,
+        blank=True,
     )
 
     Combination_Fur = models.CharField(
         help_text=_('Combination of Primary and Highlight Color'),
         max_length = 100,
         null=True,
+        default='+'
     )
 
     Color_Notes = models.CharField(
         help_text=_('Color Notes'),
         max_length=100,
         null=True,
+        blank=True,
     )
 
     AG = 'Above Ground'
@@ -146,7 +154,8 @@ class Squirrel(models.Model):
         ),
         default = BLANK,
         max_length=20,
-        null=True
+        null=True,
+        blank=True,
     )
 
     TRUE = 'TRUE'
@@ -156,12 +165,14 @@ class Squirrel(models.Model):
         help_text=_('Above Ground Sighter Measurement'),
         max_length = 10,
         null=True,
+        blank=True,
     )
 
     Specific_Location = models.CharField(
         help_text=_('Specific Location'),
         max_length=100,
         null=True,
+        blank=True,
     )
 
     Running = models.CharField(help_text=_('Running'),
@@ -179,6 +190,7 @@ class Squirrel(models.Model):
         help_text=_('Other Activities'),
         max_length=100,
         null=True,
+        blank=True,
     )
 
     Kuks = models.CharField(help_text=_('Kuks'),
@@ -202,5 +214,48 @@ class Squirrel(models.Model):
         help_text=_('Other Interactions'),
         max_length=100,
         null=True,
+        blank=True,
     )
+
+    Lat_Long = models.CharField(
+        help_text=_('Lat/Long'),
+        max_length=50,
+        null=True,
+    )
+
+    Zip_Codes = models.CharField(
+        help_text=_('Zip Codes'),
+        max_length=5,
+        null=True,
+        blank=True,
+    )
+    
+    Community_Districts = models.CharField(
+        help_text=_('Community Districts'),
+        max_length=5,
+        null=True,
+        default='19',
+    )
+
+    Borough_Boundaries = models.CharField(
+        help_text=_('Borough Boundaries'),
+        max_length=5,
+        null=True,
+        default='4',
+    )
+
+    City_Council_Districts = models.CharField(
+        help_text=_('City Council Districts'),
+        max_length=5,
+        null=True,
+        default='19',
+    )
+
+    Police_Precincts = models.CharField(
+        help_text=_('Police Precincts'),
+        max_length=5,
+        null=True,
+        default='13',
+    )
+
 # Create your models here.

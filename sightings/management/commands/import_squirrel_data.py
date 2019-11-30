@@ -49,5 +49,11 @@ class Command(BaseCommand):
                     Indifferent = row.get('Indifferent'),
                     Runs_From = row.get('Runs from'),
                     Other_Interactions = row.get('Other Interactions'),
+                    Lat_Long = row.get('Lat/Long'),
+                    Zip_Codes = row.get('Zip Codes'),
+                    Community_Districts = row.get('Community Districts'),
+                    Borough_Boundaries = row.get('Borough Boundaries'),
+                    City_Council_Districts = row.get('City Council Districts'),
+                    Police_Precincts = row.get('Police Precincts'),
                 )
         print('Done!')

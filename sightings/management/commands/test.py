@@ -10,8 +10,8 @@ class Command(BaseCommand):
             writer = csv.writer(csvfile, delimiter = ',')
             all_fields = [f.name for f in Squirrel._meta.get_fields()]
             fieldnames = [Squirrel._meta.get_field(i).help_text for i in all_fields[1:]]
-            writer.writerow(all_fields[1:])
-            for j in range(len(Squirrel.objects.all())-1):
+            writer.writerow(fieldnames)
+            for j in range(len(Squirrel.objects.all())):
                 rowval=list()
                 for i in all_fields:
                     if i == 'id': continue
