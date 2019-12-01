@@ -2,6 +2,8 @@
 <title> List of Squirrel Sightings by Unique Sighting ID </title>
 <ul>
     {% for squirrel in squirrels %}
-        <li> {{ squirrel.Unique_Squirrel_ID }} </li>
+    <li> 
+	    <a href="/sightings/{{squirrel.Unique_Squirrel_ID}}">{{squirrel.Unique_Squirrel_ID}}</a> 
+    </li>
     {% endfor %}
 </ul>

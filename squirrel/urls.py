@@ -19,6 +19,6 @@ from django.urls import include, path
 from sightings.views import sightings_view
 
 urlpatterns = [
-    path('sightings/', sightings_view, name='sightings'),
+    path('sightings/', include('sightings.urls')),
     path('admin/', admin.site.urls),
 ]
