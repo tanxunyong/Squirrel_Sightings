@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-      	<head>
+	  <head>
 		      <!-- Required meta tags -->
 		          <meta charset="utf-8">
 			      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,10 +45,12 @@
 												                // must leave attribution in!
 												                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 														        }).addTo(map);
+
         <!-- L.Icon.Default.prototype.options.iconSize = 15; -->
 	        <!-- L.Icon.Default.prototype.options.iconAnchor = [0, 0]; -->
 		        <!-- L.Icon.Default.prototype.options.shadowSize = 15; -->
 			        <!-- L.Icon.Default.prototype.options.shadowAnchor = [0, 0]; -->
+
 				        {% for sighting in sightings %}
 					          var point_lat_lon = [{{ sighting.latitude }}, {{ sighting.longitude }}];
 						            var marker = L.marker(point_lat_lon).addTo(map);
