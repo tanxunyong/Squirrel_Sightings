@@ -35,8 +35,8 @@ class Squirrel(models.Model):
     Shift = models.CharField(
         help_text=_('Shift'),
         choices = (
-            (AM, 'Before Noon'),
-            (PM, 'After Noon'),
+            (AM, 'AM'),
+            (PM, 'PM'),
         ),
         default = AM,
         max_length =2,
