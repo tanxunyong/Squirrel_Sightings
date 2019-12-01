@@ -5,23 +5,26 @@ from django.utils.translation import gettext as _
 class Squirrel(models.Model):
 
     X = models.FloatField(
-        help_text=_('longitude'),
+        help_text=_('X'),
         null=True,
     )
     
     Y = models.FloatField(
-        help_text=_('latitude'),
+        help_text=_('Y'),
         null=True,
     )
 
     Unique_Squirrel_ID = models.CharField(
         help_text=_('Unique Squirrel ID'),
-        max_length=3,
+        max_length=13,
         null=True,
     )
 
+    def __str__(self):
+        return self.Unique_Squirrel_ID
+
     Hectare = models.CharField(
-        help_text=_('Unique Squirrel ID'),
+        help_text=_('Hectare'),
         max_length = 3,
         null=True,
     )
@@ -67,6 +70,7 @@ class Squirrel(models.Model):
         default = BLANK,
         max_length=10,
         null=True,
+        blank=True,
     )
 
     GRAY = 'Gray'
@@ -85,6 +89,7 @@ class Squirrel(models.Model):
         default = BLANK,
         max_length = 10,
         null=True,
+        blank=True,
     )
 
     G = 'Gray'
@@ -119,18 +124,21 @@ class Squirrel(models.Model):
         default = BLANK,
         max_length = 30,
         null=True,
+        blank=True,
     )
 
     Combination_Fur = models.CharField(
         help_text=_('Combination of Primary and Highlight Color'),
         max_length = 100,
         null=True,
+        default='+'
     )
 
     Color_Notes = models.CharField(
         help_text=_('Color Notes'),
         max_length=100,
         null=True,
+        blank=True,
     )
 
     AG = 'Above Ground'
@@ -146,7 +154,8 @@ class Squirrel(models.Model):
         ),
         default = BLANK,
         max_length=20,
-        null=True
+        null=True,
+        blank=True,
     )
 
     TRUE = 'TRUE'
@@ -156,38 +165,97 @@ class Squirrel(models.Model):
         help_text=_('Above Ground Sighter Measurement'),
         max_length = 10,
         null=True,
+        blank=True,
     )
 
     Specific_Location = models.CharField(
         help_text=_('Specific Location'),
         max_length=100,
         null=True,
+        blank=True,
     )
 
-    Running = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Chasing = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Climbing = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Eating = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Foraging = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Running = models.CharField(help_text=_('Running'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Chasing = models.CharField(help_text=_('Chasing'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Climbing = models.CharField(help_text=_('Climbing'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Eating = models.CharField(help_text=_('Eating'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Foraging = models.CharField(help_text=_('Foraging'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
 
     Other_Activities = models.CharField(
         help_text=_('Other Activities'),
         max_length=100,
         null=True,
+        blank=True,
     )
 
-    Kuks = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Quaas = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Moans = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Tail_Flags = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Tail_Twitches = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Approaches = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Indifferent = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
-    Runs_From = models.CharField(choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Kuks = models.CharField(help_text=_('Kuks'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Quaas = models.CharField(help_text=_('Quaas'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Moans = models.CharField(help_text=_('Moans'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Tail_Flags = models.CharField(help_text=_('Tail flags'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Tail_Twitches = models.CharField(help_text=_('Tail twitches'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Approaches = models.CharField(help_text=_('Approaches'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Indifferent = models.CharField(help_text=_('Indifferent'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
+    Runs_From = models.CharField(help_text=_('Runs from'),
+            choices=((TRUE,'TRUE'),(FALSE,'FALSE')),default=FALSE,max_length=5,null=True)
     
     Other_Interactions = models.CharField(
         help_text=_('Other Interactions'),
         max_length=100,
         null=True,
+        blank=True,
     )
+
+    Lat_Long = models.CharField(
+        help_text=_('Lat/Long'),
+        max_length=50,
+        null=True,
+    )
+
+    Zip_Codes = models.CharField(
+        help_text=_('Zip Codes'),
+        max_length=5,
+        null=True,
+        blank=True,
+    )
+    
+    Community_Districts = models.CharField(
+        help_text=_('Community Districts'),
+        max_length=5,
+        null=True,
+        default='19',
+    )
+
+    Borough_Boundaries = models.CharField(
+        help_text=_('Borough Boundaries'),
+        max_length=5,
+        null=True,
+        default='4',
+    )
+
+    City_Council_Districts = models.CharField(
+        help_text=_('City Council Districts'),
+        max_length=5,
+        null=True,
+        default='19',
+    )
+
+    Police_Precincts = models.CharField(
+        help_text=_('Police Precincts'),
+        max_length=5,
+        null=True,
+        default='13',
+    )
+
 # Create your models here.
