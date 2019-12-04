@@ -1,0 +1,8 @@
+<h1>Delete Squirrel</h1>
+
+<p>Are you sure you want to delete the entry: {{ sightings }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+</form>
