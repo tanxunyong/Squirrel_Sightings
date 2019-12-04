@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext as _
-from django_pandas.managers import DataFrameManager
+
 
 class Squirrel(models.Model):
 
@@ -257,5 +257,5 @@ class Squirrel(models.Model):
         null=True,
         default='13',
     )
-    objects=DataFrameManager()
+
 # Create your models here.
