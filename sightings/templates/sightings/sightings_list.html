@@ -1,9 +1,13 @@
 
 <title> List of Squirrel Sightings by Unique Sighting ID </title>
+
+<a href="add/" class="button--style-red">Add Squirrel Sighting</a>
+
+<h3> List of Existing Squirrel Sightings </h3>
 <ul>
     {% for squirrel in squirrels %}
     <li> 
-	    <a href="/sightings/{{squirrel.Unique_Squirrel_ID}}">{{squirrel.Unique_Squirrel_ID}}</a> 
+	    <a href="{{squirrel.Unique_Squirrel_ID}}">{{squirrel.Unique_Squirrel_ID}}</a> 
     </li>
     {% endfor %}
 </ul>

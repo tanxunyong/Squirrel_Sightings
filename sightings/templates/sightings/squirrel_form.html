@@ -1,5 +1,3 @@
-<h1>Edit/Delete Squirrel Sighting</h1>
-
 <form method="post" novalidate>
   {% csrf_token %}
 
@@ -17,10 +15,10 @@
         <td>
           {{ field.errors }}
           {{ field }}
-        </td>
+        /td>
       </tr>
     {% endfor %}
   </table>
-  <input type='submit' value='Save' />
-  <a href="{{sqid}}/delete/"><button type="button">Delete Sighting</button></a>
+
+  <button type="submit">Submit</button>
 </form>

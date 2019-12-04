@@ -20,5 +20,6 @@ from sightings.views import sightings_view
 
 urlpatterns = [
     path('sightings/', include('sightings.urls')),
+    path('map/', include('map.urls')),
     path('admin/', admin.site.urls),
 ]
