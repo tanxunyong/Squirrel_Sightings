@@ -17,7 +17,7 @@ class Squirrel(models.Model):
     Unique_Squirrel_ID = models.CharField(
         help_text=_('Unique Squirrel ID'),
         max_length=13,
-        null=True,
+        primary_key=True,
     )
 
     def __str__(self):
@@ -33,10 +33,10 @@ class Squirrel(models.Model):
     PM = 'PM'
 
     Shift = models.CharField(
-        help_text=_('Morning or Afternoon Shift'),
+        help_text=_('Shift'),
         choices = (
-            (AM, 'Before Noon'),
-            (PM, 'After Noon'),
+            (AM, 'AM'),
+            (PM, 'PM'),
         ),
         default = AM,
         max_length =2,
@@ -44,7 +44,7 @@ class Squirrel(models.Model):
     )
 
     Date = models.DateField(
-        help_text=_('Date of Sighting'),
+        help_text=_('Date'),
         null=True,
     )
 
@@ -60,7 +60,7 @@ class Squirrel(models.Model):
     BLANK = ''
 
     Age = models.CharField(
-        help_text=_('Squirrel Age'),
+        help_text=_('Age'),
         choices = (
             (ADULT, 'Adult'),
             (JUVENILE, 'Juvenile'),
