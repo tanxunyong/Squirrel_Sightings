@@ -2,12 +2,11 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
-from django_pandas.io import read_frame
+
 
 from .forms import SightingsForm
 
 from .models import Squirrel
-from .models import data_squirrel
 
 class add_view(CreateView):
     model = Squirrel
@@ -40,9 +39,13 @@ def edit_view(request, sq_id):
     return render(request, 'sightings/edit.html', context)
 
 def stats(request):
-    squirrels = data_squirrel.objects.all()
-    df = read_frame(squirrels, fieldnames=['Unique_Squirrel_ID', 'X', 'Y'])
-    return HttpResponse(df.to_html())
+    squirrels = Squirrel.objects.all()
+    context={
+        'squirrels':squirrels        
+    }
+ 
+    return render(request,'sightings/sightings_stats.html',context)
 
-#def add_view(request):
-#    return render(request, 'sightings/add.html',{})
+
+
+
