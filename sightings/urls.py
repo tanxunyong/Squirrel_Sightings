@@ -10,7 +10,11 @@ urlpatterns = [
         path('add/', views.add_view.as_view(), name='add'),
         path('<str:pk>/delete/', views.delete_view.as_view(),name='delete'),
 <<<<<<< HEAD
+<<<<<<< HEAD
         path('stats/',views.stats,name='stats'),
 =======
 >>>>>>> 1cd0a04... Add map and delete view.
+=======
+        path('stats/',views.stats,name='stats'),
+>>>>>>> feature5
         ]

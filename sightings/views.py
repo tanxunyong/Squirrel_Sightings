@@ -3,9 +3,13 @@ from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 1cd0a04... Add map and delete view.
+=======
+
+>>>>>>> feature5
 
 from .forms import SightingsForm
 
@@ -61,6 +65,7 @@ def stats(request):
 
 
 
+<<<<<<< HEAD
 
 =======
     # Create your views here.
@@ -68,3 +73,6 @@ def stats(request):
 #def add_view(request):
  #   return render(request, 'sightings/add.html',{})
 >>>>>>> 1cd0a04... Add map and delete view.
+=======
+
+>>>>>>> feature5
