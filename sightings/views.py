@@ -15,8 +15,6 @@ class add_view(CreateView):
 class delete_view(DeleteView):
     model = Squirrel
     success_url = reverse_lazy('sightings:sightings')
- #   def get_success_url(self):
-  #    return reverse('sightings', kwargs={'Unique_Squirrel_ID': self.object.Unique_Squirrel_ID})
 
 def sightings_view(request,*args,**kwargs):
     squirrels = Squirrel.objects.all()
@@ -45,7 +43,4 @@ def stats(request):
     }
  
     return render(request,'sightings/sightings_stats.html',context)
-
-
-
 
