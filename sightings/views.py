@@ -8,6 +8,7 @@ from .forms import SightingsForm
 
 from .models import Squirrel
 
+<<<<<<< HEAD
 class add_view(CreateView):
     model = Squirrel
     fields = '__all__'
@@ -18,6 +19,8 @@ class delete_view(DeleteView):
  #   def get_success_url(self):
   #    return reverse('sightings', kwargs={'Unique_Squirrel_ID': self.object.Unique_Squirrel_ID})
 
+=======
+>>>>>>> a84e14a... Edit sightings/views to load existing object
 def sightings_view(request,*args,**kwargs):
     squirrels = Squirrel.objects.all()
     context={
