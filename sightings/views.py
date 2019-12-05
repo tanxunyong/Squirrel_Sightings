@@ -2,13 +2,19 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1cd0a04... Add map and delete view.
 
 from .forms import SightingsForm
 
 from .models import Squirrel
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1cd0a04... Add map and delete view.
 class add_view(CreateView):
     model = Squirrel
     fields = '__all__'
@@ -19,8 +25,11 @@ class delete_view(DeleteView):
  #   def get_success_url(self):
   #    return reverse('sightings', kwargs={'Unique_Squirrel_ID': self.object.Unique_Squirrel_ID})
 
+<<<<<<< HEAD
 =======
 >>>>>>> a84e14a... Edit sightings/views to load existing object
+=======
+>>>>>>> 1cd0a04... Add map and delete view.
 def sightings_view(request,*args,**kwargs):
     squirrels = Squirrel.objects.all()
     context={
@@ -40,6 +49,7 @@ def edit_view(request, sq_id):
         'sqid':sq_id,
     }
     return render(request, 'sightings/edit.html', context)
+<<<<<<< HEAD
 
 def stats(request):
     squirrels = Squirrel.objects.all()
@@ -52,3 +62,9 @@ def stats(request):
 
 
 
+=======
+    # Create your views here.
+
+#def add_view(request):
+ #   return render(request, 'sightings/add.html',{})
+>>>>>>> 1cd0a04... Add map and delete view.
