@@ -1,0 +1,24 @@
+<title> General Information About Sighitng Statistics  </title>
+
+<h3> General Statistics of Sightings  </h3>
+<table>
+	<th>Squirrel ID</th>
+     	<th>Longitude</th>
+	<th>Lactitude</th>
+	<th>Age</th>
+	<th>Hectare_Squirrel_Number</th>
+	<th>Date</th>
+	<th>Running</th>	
+	{% for squirrel in squirrels %}
+	   <tr> 
+		   <td>{{squirrel.Unique_Squirrel_ID}}</td>
+		   <td>{{squirrel.X}}</td>
+		   <td>{{squirrel.Y}}</td>
+		   <td>{{squirrel.Age}}</td>
+		   <td>{{squirrel.Hectare_Squirrel_Number}}</td>
+		   <td>{{squirrel.Date}}</td>
+		   <td>{{squirrel.Running}}</td>
+	   </tr>
+	{% endfor %}
+
+</table> 
