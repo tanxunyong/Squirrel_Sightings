@@ -1,13 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Squirrel Sightings</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<title> List of Squirrel Sightings by Unique Sighting ID </title>
+<div class="container">
+  <h2>List of Squirrel Sightings</h2>
+  <br>
+  <a href="add/" class="button--style-red">
+    <button type="button" class="btn btn-primary">
+      Add Sighting
+    </button>
+  </a>
+  <br>
+  <br>
+  <p>Search the table for Unique Squirrel ID, Date, Lat/Long:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <p>Click on link to edit sighting</p>
+  <table class="table table-bordered table-striped">
+    
+    <thead>
+      <tr>
+        {% for field in fields %}  
+          <th>{{field}}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      {% for squirrel in squirrels %}
+        <tr>
+	  <td><a href="{{squirrel.Unique_Squirrel_ID}}">{{squirrel.Unique_Squirrel_ID}}</a></td>
+	  <td>{{squirrel.Date}}</td>
+	  <td>{{squirrel.Lat_Long}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>  
+  <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+</div>
 
-<a href="add/" class="button--style-red">Add Squirrel Sighting</a>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 
-<h3> List of Existing Squirrel Sightings </h3>
-<ul>
-    {% for squirrel in squirrels %}
-    <li> 
-	    <a href="{{squirrel.Unique_Squirrel_ID}}">{{squirrel.Unique_Squirrel_ID}}</a> 
-    </li>
-    {% endfor %}
-</ul>
+</body>
+</html>

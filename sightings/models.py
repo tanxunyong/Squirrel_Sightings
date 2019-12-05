@@ -16,18 +16,18 @@ class Squirrel(models.Model):
 
     Unique_Squirrel_ID = models.CharField(
         help_text=_('Unique Squirrel ID'),
-        max_length=13,
+        max_length=14,
         primary_key=True,
     )
-
-    def __str__(self):
-        return self.Unique_Squirrel_ID
 
     Hectare = models.CharField(
         help_text=_('Hectare'),
         max_length = 3,
         null=True,
     )
+
+    def __str__(self):
+        return self.name
 
     AM = 'AM'
     PM = 'PM'
