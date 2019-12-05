@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 
+
 from .forms import SightingsForm
 
 from .models import Squirrel
@@ -36,7 +37,15 @@ def edit_view(request, sq_id):
         'sqid':sq_id,
     }
     return render(request, 'sightings/edit.html', context)
-    # Create your views here.
 
-#def add_view(request):
- #   return render(request, 'sightings/add.html',{})
+def stats(request):
+    squirrels = Squirrel.objects.all()
+    context={
+        'squirrels':squirrels        
+    }
+ 
+    return render(request,'sightings/sightings_stats.html',context)
+
+
+
+
