@@ -90,7 +90,7 @@ Run the server and then go to the brower to open the development server, adding 
 <a name="heading-7"></a>
 ## Detaild Background
 <div align="center">
-  <img src="https://media.npr.org/assets/img/2017/04/25/istock-115796521-fcf434f36d3d0865301cdcb9c996cfd80578ca99-s1600-c85.jpg",height="480" width="460" >
+  <img src="https://media.npr.org/assets/img/2017/04/25/istock-115796521-fcf434f36d3d0865301cdcb9c996cfd80578ca99-s1600-c85.jpg",height="500" width="480" >
 </div>
 Eccentric billionaire Joffrey Hosencratz just purchased the web development company we work for. We’ve met him once in an elevator and he relayed that his most recent trip to Sedona, AZ has left him in a bit of trouble. See, he fancies the show [Rick and Morty](https://www.youtube.com/watch?v=C5SU_K-GFKk/) and a particular scene coupled with a traumatic childhood squirrel experience and a bad crystal bath experience in Sedona as left him wanting. 
 
