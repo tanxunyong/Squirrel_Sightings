@@ -5,15 +5,17 @@
 This file is written to describing the tools, the use and the behaviour of this webapplication for squirrel sighting tracking, intended for those with a pleasant or traumatic childhood squirrel experience and crystal bath experience in Sedona at the Central Park in the city of New York. 
 
 ## Content
-- [Heading](#Functions)
-- [Heading](#Dataset)
-- [Heading](#Installation)
-- [Heading](#Installation of Dependencies)
-- [Heading](#Management Commands)
-- [Heading](#API)
-- [Heading](#Detailed Background)
-- [Heading](##Issue Tracker and Mailing List)
-- [Heading](#Contributors)
+- [Functions](#heading)
+- [Dataset](#heading-2)
+- [Installation](#heading-3)
+- [Installation of Dependencies](#heading-3)
+- [Management Commandds](#heading-4)
+- [API](#heading-5)
+- [Detailed Background](#heading-6)
+- [Issue Tracker and Mailing List](#heading-7)
+- [Contributors](#heading-8)
+
+
 
 ## Functions
 
@@ -90,8 +92,7 @@ Eccentric billionaire Joffrey Hosencratz just purchased the web development comp
 He would like to start keeping track of all the known squirrels and plans to start with Central Park. Therefore we are asked to build an application that can import the 2018 Central Park Squirrel Census data and allow his team to add, update, and delete squirrel data. 
 
 ## Issue Tracker and Mailing List
-Bug reports are welcome!  You can submit pull requests on 
-GitHub <git@github.com:tanxunyong/Squirrel_Sightings.git>.
+Bug reports are welcome!  You can submit pull requests on GitHub <git@github.com:tanxunyong/Squirrel_Sightings.git> if your spot any issues when executing our code.
 
 ## Contributors
 
