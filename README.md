@@ -59,29 +59,29 @@ $ python manage.py export_squirrel_data /path/to/file.csv
 Run the server and then go to the brower to open the development server, adding different views location to the url will lead to different API with different function.
 
 > **Map**:  
-* Behavior: Map is a view that shows a map that displays the location of the squirrel sightings on an [OpenStreets map](https://www.openstreetmap.org/about/).
-* Located at: /map
-* Warning: If you plot 100 notes at once, the browser may freeze for a while.
+* **Behavior**: Map is a view that shows a map that displays the location of the squirrel sightings on an [OpenStreets map](https://www.openstreetmap.org/about/).
+* **Located at**: /map
+* **Warning**: If you plot 100 notes at once, the browser may freeze for a while.
  
 > **Sightings**: 
-* Behavior: Sightings is a view that lists all squirrel sightings with links to edit and add sightings.
-* Located at: /sightings
+* **Behavior**: Sightings is a view that lists all squirrel sightings with links to edit and add sightings.
+* **Located at**: /sightings
  
 > **Update**: 
-* Behavior: Update is a view to update a particular sighting. Add a specific unique squirrel id in the location to check and update the individual information of a squirrel.
-* Located at: /sightings/<unique-squirrel-id>
+* **Behavior**: Update is a view to update a particular sighting. Add a specific unique squirrel id in the location to check and update the individual information of a squirrel.
+* **Located at**: /sightings/<unique-squirrel-id>
  
 > **Add**: 
-* Behavior: Add is a view to create a new sighting to the database. Open the link and input the necessary information: Latitude, Longitude, Unique Squirrel ID, Shift, Date, Age, Primary Fur Color, Location, Specific Location, Running, Chasing, Climbing, Eating, Foraging, Other Activities, Kuks, Quaas, Moans, Tail flags, Tail twitches, Approaches, Indifferent and Runs from. After adding the squirrel, it will be added to the sighting list and be updated.
-* Located at: /sightings/add
+* **Behavior**: Add is a view to create a new sighting to the database. Open the link and input the necessary information: Latitude, Longitude, Unique Squirrel ID, Shift, Date, Age, Primary Fur Color, Location, Specific Location, Running, Chasing, Climbing, Eating, Foraging, Other Activities, Kuks, Quaas, Moans, Tail flags, Tail twitches, Approaches, Indifferent and Runs from. After adding the squirrel, it will be added to the sighting list and be updated.
+* **Located at**: /sightings/add
  
 > **Delete**: 
-* Behavior: Delete is a view to update a particular sighting. Add a specific unique squirrel id in the location to view and delete individual information of a squirrel.
-* Located at: /sightings/<unique-squirrel-id>
+* **Behavior**: Delete is a view to update a particular sighting. Add a specific unique squirrel id in the location to view and delete individual information of a squirrel.
+* **Located at**: /sightings/<unique-squirrel-id>
  
 > **General**: 
-* Behavior: General Stats is a view to view important general information about the squirrel sightings. In this page, typical attritbutes of all the squirrel sightings are listed.
-* Located at: /sightings/stats
+* **Behavior**: General Stats is a view to view important general information about the squirrel sightings. In this page, typical attritbutes of all the squirrel sightings are listed.
+* **Located at**: /sightings/stats
 
 ## Detaild Background
 <div align="center">
@@ -97,6 +97,8 @@ Bug reports are welcome!  You can submit pull requests on GitHub <git@github.com
 ## Contributors
 
 **Group Name**: Proejct Group 76      
+
 **Group Member**: Xunyong Tan(uni:xt2227)  Tianyan Wang(uni:tw2730) 
+
 **UNIs**: [xt2227 , tw2730]
 
