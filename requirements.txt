@@ -1,5 +1,10 @@
-django==2.2.7
+Django==2.2.7
 django-geojson==2.10.0
 django-leaflet==0.24.0
 six>=1.10.0
-
+jsonfield==2.0.2
+pytz==2019.3
+requests==2.22.0
+six==1.13.0
+sqlparse==0.3.0
+urllib3==1.25.7
