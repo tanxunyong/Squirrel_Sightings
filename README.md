@@ -8,37 +8,41 @@ This file is written to describing the tools, the use and the behaviour of this 
 - [Functions](#heading)
 - [Dataset](#heading-2)
 - [Installation](#heading-3)
-- [Installation of Dependencies](#heading-3)
-- [Management Commandds](#heading-4)
-- [API](#heading-5)
-- [Detailed Background](#heading-6)
-- [Issue Tracker and Mailing List](#heading-7)
-- [Contributors](#heading-8)
+- [Installation of Dependencies](#heading-4)
+- [Management Commandds](#heading-5)
+- [API](#heading-6)
+- [Detailed Background](#heading-7)
+- [Issue Tracker and Mailing List](#heading-8)
+- [Contributors](#heading-9)
 
 
-
+<a name="heading"></a>
 ## Functions
 
 This **Squirrel Sighting Tracking Webapplication** is based on Django development and keeps track of all the known and recorded squirrels in 2018 at the Central Park as a starting observation. In this webapplication, the squirrel tracking dataset is imported. Users can add,delect, edit and view the statistics of Squirrel Sighting data and get the visualization of the geographic information of all the squirrel sightings generalized in the map.
 
+<a name="heading-2"></a>
 ## Dataset
 
 The squirrel sighting data for this webapplication can be imported from [**2018 Central Park Squirrel Census**](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/data), which was collected and published by the [**Squirrel Census Comminity**](https://www.thesquirrelcensus.com/) in 2019. 
 
 This dataset contains data from 3,023 different squirrel sightings, including location coordinates, age, primary and secondary fur color, elevation, activities, communications, and interactions between squirrels and with humans at the Central Park.
 
+<a name="heading-3"></a>
 ## Installation
 Clone this repository into your project with the following SSH:
 ```bash
 git@github.com:tanxunyong/Squirrel_Sightings.git
 ```
+
+<a name="heading-4"></a>
 ## Installation of Dependencies
 
 As many platforms as a Services expect a requirements.txt file in the root of projects, install the production requirements using this code:
 ``` bash
 $ pip install -r requirements.txt
 ```
-
+<a name="heading-5"></a>
 ## Management Commands
 
 To import and export the dataset, use these management commands:
@@ -54,7 +58,7 @@ $ python manage.py import_squirrel_data /path/to/file.csv
 ```bash
 $ python manage.py export_squirrel_data /path/to/file.csv
 ```
-
+<a name="heading-6"></a>
 ## API
 Run the server and then go to the brower to open the development server, adding different views location to the url will lead to different API with different function.
 
@@ -83,6 +87,7 @@ Run the server and then go to the brower to open the development server, adding 
 * **Behavior**: General Stats is a view to view important general information about the squirrel sightings. In this page, typical attritbutes of all the squirrel sightings are listed.
 * **Located at**: /sightings/stats
 
+<a name="heading-7"></a>
 ## Detaild Background
 <div align="center">
   <img src="https://media.npr.org/assets/img/2017/04/25/istock-115796521-fcf434f36d3d0865301cdcb9c996cfd80578ca99-s1600-c85.jpg",height="480" width="460" >
@@ -91,9 +96,11 @@ Eccentric billionaire Joffrey Hosencratz just purchased the web development comp
 
 He would like to start keeping track of all the known squirrels and plans to start with Central Park. Therefore we are asked to build an application that can import the 2018 Central Park Squirrel Census data and allow his team to add, update, and delete squirrel data. 
 
+<a name="heading-8"></a>
 ## Issue Tracker and Mailing List
 Bug reports are welcome!  You can submit pull requests on GitHub <git@github.com:tanxunyong/Squirrel_Sightings.git> if your spot any issues when executing our code.
 
+<a name="heading-9"></a>
 ## Contributors
 
 **Group Name**: Proejct Group 76      
