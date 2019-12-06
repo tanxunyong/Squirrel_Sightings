@@ -27,7 +27,7 @@ This dataset contains data from 3,023 different squirrel sightings, including lo
 
     -	$ python manage.py export_squirrel_data /path/to/file.csv
 
-# 
+#  
 
 
 # Contributors
