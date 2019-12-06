@@ -5,7 +5,15 @@
 This file is written to describing the tools, the use and the behaviour of this webapplication for squirrel sighting tracking, intended for those with a pleasant or traumatic childhood squirrel experience and crystal bath experience in Sedona at the Central Park in the city of New York. 
 
 ## Content
-Content
+- [Heading](#Functions)
+- [Heading](#Dataset)
+- [Heading](#Installation)
+- [Heading](#Installation of Dependencies)
+- [Heading](#Management Commands)
+- [Heading](#API)
+- [Heading](#Detailed Background)
+- [Heading](##Issue Tracker and Mailing List)
+- [Heading](#Contributors)
 
 ## Functions
 
