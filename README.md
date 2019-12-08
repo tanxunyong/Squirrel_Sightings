@@ -9,7 +9,7 @@ This file is written to describing the tools, the use and the behaviour of this 
 - [Dataset](#heading-2)
 - [Installation](#heading-3)
 - [Installation of Dependencies](#heading-4)
-- [Management Commandds](#heading-5)
+- [Management Commands](#heading-5)
 - [API](#heading-6)
 - [Detailed Background](#heading-7)
 - [Issue Tracker and Mailing List](#heading-8)
