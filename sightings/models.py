@@ -27,7 +27,7 @@ class Squirrel(models.Model):
     )
 
     def __str__(self):
-        return self.name
+        return self.Unique_Squirrel_ID
 
     AM = 'AM'
     PM = 'PM'
