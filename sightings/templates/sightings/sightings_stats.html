@@ -1,6 +1,24 @@
+<DOCTYPE! html>
+<html>
+<head>I
 <title> General Information About Sighitng Statistics  </title>
-
-<h3> General Statistics of Sightings  </h3>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'sightings/style.css' %}">
+<style>
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th, td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color:#f5f5f5;}
+</style>
+</head>
+<body>
+	<h2> <font color="SlateBlue"> General Statistics of Sightings </font> </h2>
 <table>
 	<th>Squirrel ID</th>
      	<th>Longitude</th>
@@ -11,7 +29,7 @@
 	<th>Running</th>	
 	{% for squirrel in squirrels %}
 	   <tr> 
-		   <td>{{squirrel.Unique_Squirrel_ID}}</td>
+		   <td><a href="{{squirrel.Unique_Squirrel_ID}}">{{squirrel.Unique_Squirrel_ID}}</a></td>
 		   <td>{{squirrel.X}}</td>
 		   <td>{{squirrel.Y}}</td>
 		   <td>{{squirrel.Age}}</td>
@@ -21,4 +39,6 @@
 	   </tr>
 	{% endfor %}
 
-</table> 
+</table>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Django==2.2.8
+django-geojson==2.10.0
+django-leaflet==0.24.0
+six>=1.10.0
+jsonfield==2.0.2
+requests==2.22.0
+
+
