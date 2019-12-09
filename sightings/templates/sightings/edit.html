@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-  
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <title>Edit squirrel sighting</title></head>
-
+  <title>Edit squirrel sighting</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 <body>
-<h2>Edit a new sighting of squirrel</h2></center>
+<div class="container">
+<h2>Edit a new squirrel sighting</h2></center>
+<p>Make changes in the form and save or delete sighting at the bottom.</p>
+<button type="button" class="btn btn-link"><a href="/sightings">return to sightings page</a></button>
 <form method="post" novalidate>
   {% csrf_token %}
 
@@ -22,7 +24,11 @@
     {{ hidden_field }}
   {% endfor %}
 
-  <table border="1">
+  <table class="table-responsive table-striped" border="1">
+    <tr>
+      <th>Fields</th>
+      <th>Input</th>
+    </tr>
     {% for field in form.visible_fields %}
       <tr>
         <th>{{ field.label_tag }}</th>
@@ -36,5 +42,6 @@
   <input type='submit' value='Save' />
   <a href="{{sqid}}/delete/"><button type="button">Delete Sighting</button></a>
 </form>
+</div>
 </body>
 </html>

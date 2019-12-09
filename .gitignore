@@ -1,3 +1,13 @@
+
+*.log
+  
+*.sql
+
+*.sqlite
+
+*.pyc
+
+*.py[cod]
 map/__pycache__/__init__.cpython-36.pyc
 map/__pycache__/__init__.cpython-36.pyc
 map/__pycache__/models.cpython-36.pyc

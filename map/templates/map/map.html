@@ -107,8 +107,10 @@
         {% for sighting in sightings %}
           
           var point_lat_lon = [{{ sighting.Y }}, {{ sighting.X }}];
+         
+var info = "Lat: {{sighting.Y}} <br> Long: {{sighting.X}} <br> Unique ID: {{sighting.Unique_Squirrel_ID}} <a href = /sightings/{{sighting.Unique_Squirrel_ID}}> edit </a>"
 
-          var marker = L.marker(point_lat_lon).addTo(map);
+          var marker = L.marker(point_lat_lon).addTo(map).bindPopup(info);
 
         {% endfor %}
 
