@@ -1,5 +1,17 @@
-<h1>Edit/Delete Squirrel Sighting</h1>
+<!DOCTYPE html>
 
+<html lang="en">
+
+  
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Edit squirrel sighting</title></head>
+
+<body>
+<h2>Edit a new sighting of squirrel</h2></center>
 <form method="post" novalidate>
   {% csrf_token %}
 
@@ -24,3 +36,5 @@
   <input type='submit' value='Save' />
   <a href="{{sqid}}/delete/"><button type="button">Delete Sighting</button></a>
 </form>
+</body>
+</html>

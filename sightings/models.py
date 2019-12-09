@@ -221,6 +221,7 @@ class Squirrel(models.Model):
         help_text=_('Lat/Long'),
         max_length=50,
         null=True,
+        blank=True,
     )
 
     Zip_Codes = models.CharField(

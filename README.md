@@ -1,6 +1,6 @@
 # 2018 Central Park Squirrel Census: A Sighting Tracking Visualization Webapplication
 
-> **Group Name**: Proejct Group 76   |   **Group Member**: Xunyong Tan ,  Tianyan Wang | **UNIs**: [xt2227,tw2730] 
+> **Group Name**: Project Group 76   |   **Group Member**: Xunyong Tan ,  Tianyan Wang | **UNIs**: [xt2227,tw2730] 
 
 This file is written to describing the tools, the use and the behaviour of this webapplication for squirrel sighting tracking, intended for those with a pleasant or traumatic childhood squirrel experience and crystal bath experience in Sedona at the Central Park in the city of New York. 
 
@@ -19,12 +19,12 @@ This file is written to describing the tools, the use and the behaviour of this 
 <a name="heading"></a>
 ## Functions
 
-This **Squirrel Sighting Tracking Webapplication** is based on Django development and keeps track of all the known and recorded squirrels in 2018 at the Central Park as a starting observation. In this webapplication, the squirrel tracking dataset is imported. Users can add,delect, edit and view the statistics of Squirrel Sighting data and get the visualization of the geographic information of all the squirrel sightings generalized in the map.
+This **Squirrel Sighting Tracking Webapplication** is based on Django development and keeps track of all the known and recorded squirrels in 2018 at the Central Park as a starting observation. In this webapplication, the squirrel tracking dataset is imported. Users can add,delete, edit and view the statistics of Squirrel Sighting data and get the view of all the squirrel sightings on a map.
 
 <a name="heading-2"></a>
 ## Dataset
 
-The squirrel sighting data for this webapplication can be imported from [**2018 Central Park Squirrel Census**](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/data), which was collected and published by the [**Squirrel Census Comminity**](https://www.thesquirrelcensus.com/) in 2019. 
+The squirrel sighting data for this webapplication can be imported from [**2018 Central Park Squirrel Census**](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/data), which was collected and published by the [**Squirrel Census Community**](https://www.thesquirrelcensus.com/) in 2019. 
 
 This dataset contains data from 3,023 different squirrel sightings, including location coordinates, age, primary and secondary fur color, elevation, activities, communications, and interactions between squirrels and with humans at the Central Park.
 
@@ -38,7 +38,7 @@ git@github.com:tanxunyong/Squirrel_Sightings.git
 <a name="heading-4"></a>
 ## Installation of Dependencies
 
-As many platforms as a Services expect a requirements.txt file in the root of projects, install the production requirements using this code:
+As many platforms and Services expect a requirements.txt file in the root of projects, install the production requirements using this code:
 ``` bash
 $ pip install -r requirements.txt
 ```
@@ -65,7 +65,7 @@ Run the server and then go to the brower to open the development server, adding 
 > **Map**:  
 * **Behavior**: Map is a view that shows a map that displays the location of the squirrel sightings on an [OpenStreets map](https://www.openstreetmap.org/about/).
 * **Located at**: /map
-* **Warning**: If you plot 100 notes at once, the browser may freeze for a while.
+* **Warning**: If you plot 100 sightings at once, the browser may freeze for a while.
  
 > **Sightings**: 
 * **Behavior**: Sightings is a view that lists all squirrel sightings with links to edit and add sightings.
@@ -84,7 +84,7 @@ Run the server and then go to the brower to open the development server, adding 
 * **Located at**: /sightings/<unique-squirrel-id>
  
 > **General**: 
-* **Behavior**: General Stats is a view to view important general information about the squirrel sightings. In this page, typical attritbutes of all the squirrel sightings are listed.
+* **Behavior**: General Stats is a view to view important general information about the squirrel sightings. In this page, typical attributes of all the squirrel sightings are listed.
 * **Located at**: /sightings/stats
 
 <a name="heading-7"></a>
@@ -98,12 +98,12 @@ He would like to start keeping track of all the known squirrels and plans to sta
 
 <a name="heading-8"></a>
 ## Issue Tracker and Mailing List
-Bug reports are welcome!  You can submit pull requests on GitHub <git@github.com:tanxunyong/Squirrel_Sightings.git> if your spot any issues when executing our code.
+Bug reports are welcome!  You can submit pull requests on GitHub <git@github.com:tanxunyong/Squirrel_Sightings.git> if you spot any issues when executing our code.
 
 <a name="heading-9"></a>
 ## Contributors
 
-**Group Name**: Proejct Group 76      
+**Group Name**: Project Group 76      
 
 **Group Member**: Xunyong Tan(uni:xt2227),  Tianyan Wang(uni:tw2730) 
 

@@ -28,11 +28,14 @@ def sightings_view(request,*args,**kwargs):
 
 def edit_view(request, sq_id):
 
-    instance = get_object_or_404(Squirrel, Unique_Squirrel_ID=sq_id)
-    form = SightingsForm(request.POST or None,instance=instance)
-    if form.is_valid():
-        form.save()
-        return redirect(f'/sightings/{sq_id}')
+    sqrl = Squirrel.objects.get(Unique_Squirrel_ID=sq_id)
+    if request.method == 'POST':
+        form = SightingsForm(request.POST, instance=sqrl)
+        if form.is_valid():
+            form.save()
+            return redirect(f'/sightings')
+    else:
+        form = SightingsForm(instance=sqrl)
     
     context ={
         'form':form,
