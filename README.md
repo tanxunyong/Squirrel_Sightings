@@ -1,8 +1,8 @@
-# 2018 Central Park Squirrel Census: A Sighting Tracking Visualization Webapplication
+# 2018 Central Park Squirrel Census: A Sighting Tracking and Visualization Webapplication
 
 > **Group Name**: Project Group 76   |   **Group Member**: Xunyong Tan ,  Tianyan Wang | **UNIs**: [xt2227,tw2730] 
 
-This file is written to describing the tools, the use and the behaviour of this webapplication for squirrel sighting tracking, intended for those with a pleasant or traumatic childhood squirrel experience and crystal bath experience in Sedona at the Central Park in the city of New York. 
+This file is written to describe the tools, the use and the behaviour of this webapplication for squirrel sighting tracking, intended to give users full control over their interactions with squirrels in Central Park, New York City. 
 
 ## Content
 - [Functions](#heading)
@@ -19,7 +19,7 @@ This file is written to describing the tools, the use and the behaviour of this 
 <a name="heading"></a>
 ## Functions
 
-This **Squirrel Sighting Tracking Webapplication** is based on Django development and keeps track of all the known and recorded squirrels in 2018 at the Central Park as a starting observation. In this webapplication, the squirrel tracking dataset is imported. Users can add,delete, edit and view the statistics of Squirrel Sighting data and get the view of all the squirrel sightings on a map.
+This **Squirrel Sighting Tracking Webapplication** is based on Django development and keeps track of all the known and recorded squirrels in 2018 at the Central Park. In this webapplication, the squirrel tracking dataset is imported. Users can add, delete, edit and view the statistics of Squirrel Sighting data and get the view of all the squirrel sightings on a map.
 
 <a name="heading-2"></a>
 ## Dataset
