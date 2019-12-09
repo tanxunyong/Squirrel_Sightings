@@ -33,7 +33,7 @@ def edit_view(request, sq_id):
         form = SightingsForm(request.POST, instance=sqrl)
         if form.is_valid():
             form.save()
-            return redirect(f'/sightings/{sq_id}')
+            return redirect(f'/sightings')
     else:
         form = SightingsForm(instance=sqrl)
     
