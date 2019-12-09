@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +12,9 @@
 <body>
 
 <div class="container">
-  <h2>List of Squirrel Sightings</h2>
+  <h2>List of Squirrel Sightings in Central Park</h2>
   <br>
+  <p>
   <a href="add/" class="button--style-red">
     <button type="button" class="btn btn-primary">
       Add Sighting
@@ -28,6 +30,8 @@
       View Sightings Map
     </button>
   </a>
+  <img src="{% static 'sightings/squirrelsighting.jpg' %}" width="50" height="50">
+  </p>
   <br>
   <br>
   <p>Search the table for Unique Squirrel ID, Date, Lat/Long:</p>  
