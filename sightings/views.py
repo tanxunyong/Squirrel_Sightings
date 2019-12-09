@@ -50,10 +50,3 @@ def stats(request):
     }
  
     return render(request,'sightings/sightings_stats.html',context)
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> master
