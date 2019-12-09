@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from sightings.views import sightings_view
+from sightings.views import main 
 
 urlpatterns = [
+    path('',main),
     path('sightings/', include('sightings.urls')),
     path('map/', include('map.urls')),
     path('admin/', admin.site.urls),

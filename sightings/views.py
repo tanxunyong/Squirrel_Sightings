@@ -17,6 +17,9 @@ class delete_view(DeleteView):
     model = Squirrel
     success_url = reverse_lazy('sightings:sightings')
 
+def main(request):
+    return render(request,'sightings/main.html', {})
+
 def sightings_view(request,*args,**kwargs):
     squirrels = Squirrel.objects.all()
     fields = ['Unique_Squirrel_ID','Date','Lat_Long']
