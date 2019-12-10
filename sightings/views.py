@@ -47,7 +47,7 @@ def edit_view(request, sq_id):
     return render(request, 'sightings/edit.html', context)
 
 def stats(request):
-    squirrels = Squirrel.objects.all()
+    squirrels = Squirrel.objects.exclude(Age__exact='').exclude(Age__exact='?').exclude(Primary_Fur_Color__exact='')
     counts=len(squirrels)
     a=squirrels.aggregate(min_latitude=Min('Y'),max_latitude=Max('Y'),average_latitude=Avg('Y'))
     b=squirrels.aggregate(min_longitude=Min('X'),max_longitude=Max('X'),average_longitude=Avg('X'))
