@@ -90,9 +90,8 @@ Run the server and then go to the brower to open the development server, adding 
 
 <a name="heading-7"></a>
 ## Deployment
-To explore the deployed webapplication, open the following link and click the link shown in the guide page.(https://green-webbing-255500.appspot.com)
-https://green-webbing-255500.appspo
-
+To explore the deployed webapplication, open the following link and click the link shown in the guide page.
+https://green-webbing-255500.appspot.com
 <a name="heading-8"></a>
 ## Detaild Background
 <div align="center">
