@@ -11,15 +11,16 @@ This file is written to describe the tools, the use and the behaviour of this we
 - [Installation of Dependencies](#heading-4)
 - [Management Commands](#heading-5)
 - [API](#heading-6)
-- [Detailed Background](#heading-7)
-- [Issue Tracker and Mailing List](#heading-8)
-- [Contributors](#heading-9)
+- [Deployment](#heading-7)
+- [Detailed Background](#heading-8)
+- [Issue Tracker and Mailing List](#heading-9)
+- [Contributors](#heading-10)
 
 
 <a name="heading"></a>
 ## Functions
 
-This **Squirrel Sighting Tracking Webapplication** is based on Django development and keeps track of all the known and recorded squirrels in 2018 at the Central Park. In this webapplication, the squirrel tracking dataset is imported. Users can add, delete, edit and view the statistics of Squirrel Sighting data and get the view of all the squirrel sightings on a map.
+This **Squirrel Sighting Tracking Webapplication** is based on Django development and keeps track of all the known and recorded squirrels in 2018 at the Central Park. In this webapplication, the squirrel tracking dataset is imported. Users can add, delete, edit and view the statistics of Squirrel Sighting data and get the view of all the squirrel sightings on a map. To explore more about the functions in deployed web, you can open [**Squirrel Sightings**](https://green-webbing-255500.appspot.com) and follow the guide.
 
 <a name="heading-2"></a>
 ## Dataset
@@ -88,24 +89,29 @@ Run the server and then go to the brower to open the development server, adding 
 * **Located at**: /sightings/stats
 
 <a name="heading-7"></a>
+## Deployment
+To explore the deployed webapplication, open the following link and click the link shown in the guide page.(https://green-webbing-255500.appspot.com)
+https://green-webbing-255500.appspo
+
+<a name="heading-8"></a>
 ## Detaild Background
 <div align="center">
   <img src="https://media.npr.org/assets/img/2017/04/25/istock-115796521-fcf434f36d3d0865301cdcb9c996cfd80578ca99-s1600-c85.jpg",height="500" width="480" >
 </div>
-Eccentric billionaire Joffrey Hosencratz just purchased the web development company we work for. We’ve met him once in an elevator and he relayed that his most recent trip to Sedona, AZ has left him in a bit of trouble. See, he fancies the show [Rick and Morty](https://www.youtube.com/watch?v=C5SU_K-GFKk/) and a particular scene coupled with a traumatic childhood squirrel experience and a bad crystal bath experience in Sedona as left him wanting. 
+Eccentric billionaire Joffrey Hosencratz just purchased the web development company we work for. We’ve met him once in an elevator and he relayed that his most recent trip to Sedona, AZ has left him in a bit of trouble. See, he fancies the show [**Rick and Morty**](https://www.youtube.com/watch?v=C5SU_K-GFKk/) and a particular scene coupled with a traumatic childhood squirrel experience and a bad crystal bath experience in Sedona as left him wanting. 
 
 He would like to start keeping track of all the known squirrels and plans to start with Central Park. Therefore we are asked to build an application that can import the 2018 Central Park Squirrel Census data and allow his team to add, update, and delete squirrel data. 
 
-<a name="heading-8"></a>
+<a name="heading-9"></a>
 ## Issue Tracker and Mailing List
 Bug reports are welcome!  You can submit pull requests on GitHub <git@github.com:tanxunyong/Squirrel_Sightings.git> if you spot any issues when executing our code.
 
-<a name="heading-9"></a>
+<a name="heading-10"></a>
 ## Contributors
 
 **Group Name**: Project Group 76      
 
-**Group Member**: Xunyong Tan(uni:xt2227),  Tianyan Wang(uni:tw2730) 
+**Group Member**: Xunyong Tan(uni: xt2227),  Tianyan Wang(uni: tw2730) 
 
 **UNIs**: [xt2227 , tw2730]
 
